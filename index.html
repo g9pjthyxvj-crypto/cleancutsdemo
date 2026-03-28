@@ -14,7 +14,7 @@ a{color:inherit;text-decoration:none}
 a:visited{color:inherit}
 :root{
   --blk:#0A0A0A;--blk2:#111111;--blk3:#1A1A1A;
-  --red:#8B0000;--red2:#A50000;--red3:#C41230;
+  --red:#8B0000;--red2:#A50000;--red3:#9B0000;
   --chrome:#B8B8B8;--chrome2:#D4D4D4;
   --white:#F0EDE8;--gray:#777777;
   --border:rgba(184,184,184,0.12);
@@ -49,7 +49,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:72px;padding:0 6%;dis
 .btn-red:hover{background:var(--red2);transform:translateY(-2px);box-shadow:0 12px 40px rgba(139,0,0,0.4)}
 .btn-ghost{background:transparent;color:var(--chrome2);border-bottom:1px solid var(--border);padding:16px 0}
 .btn-ghost:hover{color:var(--white);border-color:var(--chrome)}
-.btn-white{background:var(--white);color:var(--red)}
+.btn-white{background:var(--white);color:var(--red)!important}
 .btn-white:hover{background:var(--chrome2);transform:translateY(-2px)}
 .btn-large{padding:20px 56px;font-size:13px;letter-spacing:4px}
 .ticker{background:var(--red);padding:13px 0;overflow:hidden;white-space:nowrap}
@@ -163,6 +163,9 @@ a:hover{color:var(–white)}
 .booking-steps{grid-template-columns:1fr}
 }
 @media(max-width:640px){
+.booking-cal{padding:0;border:none;background:transparent;overflow:hidden}
+.booking-cal>div{overflow:hidden!important}
+iframe{max-width:100vw}
 nav{padding:0 5%}
 .nav-links{display:none}
 .hamburger{display:flex}
@@ -390,7 +393,7 @@ nav{padding:0 5%}
       <div class="footer-contact"><a href="mailto:hello@mojowebsite.com">hello@mojowebsite.com</a></div>
       <div class="footer-contact">Los Angeles, CA</div>
       <div style="margin-top:20px">
-        <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-red" style="font-size:10px;padding:12px 24px">Book Now →</a>
+        <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-red" style="font-size:10px;padding:12px 24px;color:var(--white)!important">Book Now →</a>
       </div>
     </div>
   </div>
