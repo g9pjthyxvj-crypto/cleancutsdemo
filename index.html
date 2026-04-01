@@ -186,6 +186,24 @@ nav{padding:0 5%}
 .booking-box{padding:40px 24px}
 .about-feats{grid-template-columns:1fr}
 }
+
+/* ── BOOKING TABS ── */
+.booking-tabs{display:flex;gap:2px;margin-bottom:36px;border-bottom:1px solid var(–border)}
+.tab-btn{padding:14px 28px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(–chrome);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s;font-family:‘Inter’,sans-serif}
+.tab-btn.on{color:var(–white);border-bottom-color:var(–red)}
+.tab-btn:hover{color:var(–white)}
+.tab-panel{display:none}
+.tab-panel.on{display:block}
+.barber-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:28px}
+.barber-tab{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(–blk2);border:1px solid var(–border);cursor:pointer;transition:all .25s;border-bottom:2px solid transparent}
+.barber-tab:hover{background:var(–blk3)}
+.barber-tab.on{border-bottom-color:var(–red);background:var(–blk3)}
+.btab-img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;filter:grayscale(30%)}
+.btab-name{font-family:‘Playfair Display’,serif;font-size:15px;font-weight:600;color:var(–white)}
+.btab-role{font-size:10px;color:var(–red3);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
+.barber-cal{display:none}
+.barber-cal.on{display:block}
+@media(max-width:640px){.barber-tabs{grid-template-columns:1fr}.booking-tabs{overflow-x:auto}}
 </style>
 
 </head>
@@ -344,9 +362,52 @@ nav{padding:0 5%}
     <p class="sec-sub" style="margin:0 auto;text-align:center">Book online in seconds. No waiting, no calling. Just show up and experience the Clean Cuts standard.</p>
   </div>
   <div class="booking-cal reveal">
-    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block;margin:0;padding:0" scrolling="no" id="gbJXvbCSdQPzD7UrinDu_1774622896836"></iframe>
+
+```
+<div class="booking-tabs">
+  <button class="tab-btn on" onclick="showTab('services',this)">Pick Your Service</button>
+  <button class="tab-btn" onclick="showTab('barbers',this)">Pick Your Barber</button>
+</div>
+
+<div class="tab-panel on" id="tab-services">
+  <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+    <iframe src="https://api.leadconnectorhq.com/widget/service-menu/69cb2b9f575c601b0f76023c" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="69cb2b9f575c601b0f76023c_cc"></iframe>
+  </div>
+</div>
+
+<div class="tab-panel" id="tab-barbers">
+  <div class="barber-tabs">
+    <div class="barber-tab on" onclick="showBarber('marcus',this)">
+      <img class="btab-img" src="https://images.pexels.com/photos/1453005/pexels-photo-1453005.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Marcus">
+      <div><div class="btab-name">Marcus Davis</div><div class="btab-role">Fade Specialist</div></div>
     </div>
+    <div class="barber-tab" onclick="showBarber('james',this)">
+      <img class="btab-img" src="https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="James">
+      <div><div class="btab-name">James Carter</div><div class="btab-role">Beard Specialist</div></div>
+    </div>
+    <div class="barber-tab" onclick="showBarber('carlos',this)">
+      <img class="btab-img" src="https://images.pexels.com/photos/3356170/pexels-photo-3356170.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Carlos">
+      <div><div class="btab-name">Carlos Rivera</div><div class="btab-role">Classic Cuts</div></div>
+    </div>
+  </div>
+  <div class="barber-cal on" id="cal-marcus">
+    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/qainl9wSf76c5vlvtfIt" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="qainl9wSf76c5vlvtfIt_cc"></iframe>
+    </div>
+  </div>
+  <div class="barber-cal" id="cal-james">
+    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/i71MaFdAkIVZocNt7nHQ" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="i71MaFdAkIVZocNt7nHQ_cc"></iframe>
+    </div>
+  </div>
+  <div class="barber-cal" id="cal-carlos">
+    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/kaYZDlrdS8NM6DQ7TPp0" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="kaYZDlrdS8NM6DQ7TPp0_cc"></iframe>
+    </div>
+  </div>
+</div>
+```
+
   </div>
 </section>
 
@@ -392,7 +453,7 @@ nav{padding:0 5%}
     <div>
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact"><a href="tel:8315664767">(831) 566-4767</a></div>
-      <div class="footer-contact"><a href="mailto:hello@mojowebsite.com">hello@mojowebsite.com</a></div>
+      <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#80e8e5ececefc0edefeaeff7e5e2f3e9f4e5aee3efed"><span class="__cf_email__" data-cfemail="4e262b2222210e23212421392b2c3d273a2b602d2123">[email&#160;protected]</span></a></div>
       <div class="footer-contact">Los Angeles, CA</div>
       <div style="margin-top:20px">
         <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-red" style="font-size:10px;padding:12px 24px;color:var(--white)!important">Book Now →</a>
@@ -405,43 +466,32 @@ nav{padding:0 5%}
   </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+
 const obs = new IntersectionObserver(entries => {
-  entries.forEach((e,i) => {
-    if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 60);
-  });
+entries.forEach((e,i) => {
+if(e.isIntersecting) setTimeout(() => e.target.classList.add(‘visible’), i * 60);
+});
 }, {threshold: 0.07});
-document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+document.querySelectorAll(’.reveal’).forEach(el => obs.observe(el));
 
 function toggleNav() {
-  const links = document.querySelector('.nav-links');
-  const open = links.style.display === 'flex';
-  if(open) { links.removeAttribute('style'); }
-  else {
-    Object.assign(links.style, {
-      display:'flex',flexDirection:'column',
-      position:'absolute',top:'72px',left:'0',right:'0',
-      background:'rgba(10,10,10,0.99)',padding:'28px 6%',
-      gap:'20px',borderBottom:'1px solid rgba(184,184,184,0.12)',zIndex:'99'
-    });
-  }
+const links = document.querySelector(’.nav-links’);
+const open = links.style.display === ‘flex’;
+if(open) { links.removeAttribute(‘style’); }
+else {
+Object.assign(links.style, {
+display:‘flex’,flexDirection:‘column’,
+position:‘absolute’,top:‘72px’,left:‘0’,right:‘0’,
+background:‘rgba(10,10,10,0.99)’,padding:‘28px 6%’,
+gap:‘20px’,borderBottom:‘1px solid rgba(184,184,184,0.12)’,zIndex:‘99’
+});
 }
-document.querySelectorAll('.nav-links a').forEach(a => {
-  a.addEventListener('click', () => document.querySelector('.nav-links').removeAttribute('style'));
+}
+document.querySelectorAll(’.nav-links a’).forEach(a => {
+a.addEventListener(‘click’, () => document.querySelector(’.nav-links’).removeAttribute(‘style’));
 });
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const id = a.getAttribute('href');
-    const target = document.querySelector(id);
-    if(target && id !== '#') {
-      e.preventDefault();
-      window.scrollTo({top: target.offsetTop - 72, behavior:'smooth'});
-    }
-  });
-});
-</script>
-
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
-</body>
-</html>
+document.querySelectorAll(‘a[href^=”#”]’).forEach(a => {
+a.addEventListener(‘click’, e => {
+const id = a.getAttribute(‘href’);
+const target = document.querySele
