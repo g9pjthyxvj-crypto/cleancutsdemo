@@ -148,7 +148,7 @@ a:hover{color:var(–white)}
 .footer-copy{font-size:11px;color:var(–gray)}
 .footer-powered a{font-size:11px;color:var(–chrome);text-decoration:none;letter-spacing:1px}
 .booking-cal{background:var(–blk);border:1px solid var(–border);padding:40px;max-width:860px;margin:0 auto}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:1024px){
 .svc-grid{grid-template-columns:repeat(2,1fr)}
@@ -187,23 +187,18 @@ nav{padding:0 5%}
 .about-feats{grid-template-columns:1fr}
 }
 
-/* ── BOOKING TABS ── */
 .booking-tabs{display:flex;gap:2px;margin-bottom:36px;border-bottom:1px solid var(–border)}
 .tab-btn{padding:14px 28px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(–chrome);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s;font-family:‘Inter’,sans-serif}
 .tab-btn.on{color:var(–white);border-bottom-color:var(–red)}
-.tab-btn:hover{color:var(–white)}
-.tab-panel{display:none}
-.tab-panel.on{display:block}
+.tab-panel{display:none}.tab-panel.on{display:block}
 .barber-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:28px}
 .barber-tab{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(–blk2);border:1px solid var(–border);cursor:pointer;transition:all .25s;border-bottom:2px solid transparent}
-.barber-tab:hover{background:var(–blk3)}
-.barber-tab.on{border-bottom-color:var(–red);background:var(–blk3)}
+.barber-tab:hover,.barber-tab.on{background:var(–blk3);border-bottom-color:var(–red)}
 .btab-img{width:44px;height:44px;border-radius:50%;object-fit:cover;object-position:top;flex-shrink:0;filter:grayscale(30%)}
 .btab-name{font-family:‘Playfair Display’,serif;font-size:15px;font-weight:600;color:var(–white)}
 .btab-role{font-size:10px;color:var(–red3);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
-.barber-cal{display:none}
-.barber-cal.on{display:block}
-@media(max-width:640px){.barber-tabs{grid-template-columns:1fr}.booking-tabs{overflow-x:auto}}
+.barber-cal{display:none}.barber-cal.on{display:block}
+@media(max-width:640px){.barber-tabs{grid-template-columns:1fr}}
 </style>
 
 </head>
@@ -263,7 +258,7 @@ nav{padding:0 5%}
   </div>
 </div>
 
-<div class="stats reveal">
+<div class="stats">
   <div class="stat"><div class="stat-num">4<em>.9</em></div><div class="stat-lbl">Star Rating</div></div>
   <div class="stat"><div class="stat-num">10<em>+</em></div><div class="stat-lbl">Years Experience</div></div>
   <div class="stat"><div class="stat-num">500<em>+</em></div><div class="stat-lbl">Happy Clients</div></div>
@@ -271,12 +266,12 @@ nav{padding:0 5%}
 </div>
 
 <section class="sec sec-dark" id="services">
-  <div class="reveal">
+  <div>
     <div class="sec-eyebrow"><div class="sec-line"></div><span class="sec-tag">What We Offer</span></div>
     <h2 class="sec-title">Our <em>Services</em></h2>
     <p class="sec-sub">Every service performed with precision, premium products, and an unwavering commitment to craft.</p>
   </div>
-  <div class="svc-grid reveal">
+  <div class="svc-grid">
     <div class="svc"><div class="svc-num">01</div><div class="svc-name">Signature Haircut</div><div class="svc-desc">A personalized cut tailored to your style, face shape, and hair type. Includes consultation, precision cut, and finish.</div><div class="svc-price">$45</div></div>
     <div class="svc"><div class="svc-num">02</div><div class="svc-name">Skin Fade</div><div class="svc-desc">Precision fade from skin to your desired length. Clean, sharp, and flawlessly blended by a master barber.</div><div class="svc-price">$50</div></div>
     <div class="svc"><div class="svc-num">03</div><div class="svc-name">Classic Beard Trim</div><div class="svc-desc">Shape, define, and clean your beard with expert precision. Finished with warm towel and premium conditioning balm.</div><div class="svc-price">$30</div></div>
@@ -288,11 +283,11 @@ nav{padding:0 5%}
 
 <section class="sec" id="about">
   <div class="about-grid">
-    <div class="about-img-wrap reveal">
+    <div class="about-img-wrap">
       <img class="about-img" src="https://images.pexels.com/photos/1453005/pexels-photo-1453005.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Barber at work">
       <div class="about-badge"><div class="badge-num">10+</div><div class="badge-txt">Years of Craft</div></div>
     </div>
-    <div class="reveal">
+    <div>
       <div class="sec-eyebrow"><div class="sec-line"></div><span class="sec-tag">Our Story</span></div>
       <h2 class="sec-title">The Clean Cuts<br><em>Standard</em></h2>
       <p class="about-body">We believe a great haircut is more than scissors and clippers. It's about <strong>the experience, the craftsmanship, and the connection</strong> between barber and client.</p>
@@ -311,12 +306,12 @@ nav{padding:0 5%}
 </section>
 
 <section class="sec sec-dark" id="gallery">
-  <div class="reveal">
+  <div>
     <div class="sec-eyebrow"><div class="sec-line"></div><span class="sec-tag">Our Work</span></div>
     <h2 class="sec-title">The <em>Craft</em></h2>
     <p class="sec-sub">Every cut tells a story. Here's ours.</p>
   </div>
-  <div class="gal-grid reveal">
+  <div class="gal-grid">
     <div class="gal-item"><img class="gal-img" src="https://images.pexels.com/photos/1570807/pexels-photo-1570807.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Barbershop cut"><div class="gal-overlay"></div></div>
     <div class="gal-item"><img class="gal-img" src="https://images.pexels.com/photos/2076932/pexels-photo-2076932.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Precision fade"><div class="gal-overlay"></div></div>
     <div class="gal-item"><img class="gal-img" src="https://images.pexels.com/photos/3356170/pexels-photo-3356170.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Classic cut"><div class="gal-overlay"></div></div>
@@ -326,13 +321,13 @@ nav{padding:0 5%}
 </section>
 
 <section class="sec" id="reviews">
-  <div class="reveal" style="text-align:center">
+  <div style="text-align:center">
     <div class="sec-eyebrow" style="justify-content:center">
       <div class="sec-line"></div><span class="sec-tag">Client Reviews</span><div class="sec-line"></div>
     </div>
     <h2 class="sec-title">What Our <em>Clients Say</em></h2>
   </div>
-  <div class="rev-grid reveal">
+  <div class="rev-grid">
     <div class="rev">
       <div class="stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
       <p class="rev-text">"I travel for work and have been to barbershops across the country. Clean Cuts is the only place I schedule around. The attention to detail is unlike anything I've experienced."</p>
@@ -354,65 +349,59 @@ nav{padding:0 5%}
 <!-- BOOKING — DIRECT LINK NO IFRAME -->
 
 <section class="sec sec-dark" id="booking">
-  <div class="reveal" style="text-align:center">
+  <div style="text-align:center">
     <div class="sec-eyebrow" style="justify-content:center">
       <div class="sec-line"></div><span class="sec-tag">Schedule Your Visit</span><div class="sec-line"></div>
     </div>
     <h2 class="sec-title">Book Your <em>Appointment</em></h2>
     <p class="sec-sub" style="margin:0 auto;text-align:center">Book online in seconds. No waiting, no calling. Just show up and experience the Clean Cuts standard.</p>
   </div>
-  <div class="booking-cal reveal">
-
-```
-<div class="booking-tabs">
-  <button class="tab-btn on" onclick="showTab('services',this)">Pick Your Service</button>
-  <button class="tab-btn" onclick="showTab('barbers',this)">Pick Your Barber</button>
-</div>
-
-<div class="tab-panel on" id="tab-services">
-  <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
-    <iframe src="https://api.leadconnectorhq.com/widget/service-menu/69cb2b9f575c601b0f76023c" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="69cb2b9f575c601b0f76023c_cc"></iframe>
-  </div>
-</div>
-
-<div class="tab-panel" id="tab-barbers">
-  <div class="barber-tabs">
-    <div class="barber-tab on" onclick="showBarber('marcus',this)">
-      <img class="btab-img" src="https://images.pexels.com/photos/1453005/pexels-photo-1453005.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Marcus">
-      <div><div class="btab-name">Marcus Davis</div><div class="btab-role">Fade Specialist</div></div>
+  <div class="booking-cal">
+    <div class="booking-tabs">
+      <button class="tab-btn on" onclick="showTab('services',this)">Pick Your Service</button>
+      <button class="tab-btn" onclick="showTab('barbers',this)">Pick Your Barber</button>
     </div>
-    <div class="barber-tab" onclick="showBarber('james',this)">
-      <img class="btab-img" src="https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="James">
-      <div><div class="btab-name">James Carter</div><div class="btab-role">Beard Specialist</div></div>
+    <div class="tab-panel on" id="tab-services">
+      <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+        <iframe src="https://api.leadconnectorhq.com/widget/service-menu/69cb2b9f575c601b0f76023c" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="svc_menu"></iframe>
+      </div>
     </div>
-    <div class="barber-tab" onclick="showBarber('carlos',this)">
-      <img class="btab-img" src="https://images.pexels.com/photos/3356170/pexels-photo-3356170.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Carlos">
-      <div><div class="btab-name">Carlos Rivera</div><div class="btab-role">Classic Cuts</div></div>
+    <div class="tab-panel" id="tab-barbers">
+      <div class="barber-tabs">
+        <div class="barber-tab on" onclick="showBarber('marcus',this)">
+          <img class="btab-img" src="https://images.pexels.com/photos/1453005/pexels-photo-1453005.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Marcus">
+          <div><div class="btab-name">Marcus Davis</div><div class="btab-role">Fade Specialist</div></div>
+        </div>
+        <div class="barber-tab" onclick="showBarber('james',this)">
+          <img class="btab-img" src="https://images.pexels.com/photos/3998429/pexels-photo-3998429.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="James">
+          <div><div class="btab-name">James Carter</div><div class="btab-role">Beard Specialist</div></div>
+        </div>
+        <div class="barber-tab" onclick="showBarber('carlos',this)">
+          <img class="btab-img" src="https://images.pexels.com/photos/3356170/pexels-photo-3356170.jpeg?auto=compress&cs=tinysrgb&w=200&h=200&fit=crop" alt="Carlos">
+          <div><div class="btab-name">Carlos Rivera</div><div class="btab-role">Classic Cuts</div></div>
+        </div>
+      </div>
+      <div class="barber-cal on" id="cal-marcus">
+        <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/qainl9wSf76c5vlvtfIt" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="marc_cal"></iframe>
+        </div>
+      </div>
+      <div class="barber-cal" id="cal-james">
+        <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/i71MaFdAkIVZocNt7nHQ" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="james_cal"></iframe>
+        </div>
+      </div>
+      <div class="barber-cal" id="cal-carlos">
+        <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
+          <iframe src="https://api.leadconnectorhq.com/widget/booking/kaYZDlrdS8NM6DQ7TPp0" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="carlos_cal"></iframe>
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="barber-cal on" id="cal-marcus">
-    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/qainl9wSf76c5vlvtfIt" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="qainl9wSf76c5vlvtfIt_cc"></iframe>
-    </div>
-  </div>
-  <div class="barber-cal" id="cal-james">
-    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/i71MaFdAkIVZocNt7nHQ" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="i71MaFdAkIVZocNt7nHQ_cc"></iframe>
-    </div>
-  </div>
-  <div class="barber-cal" id="cal-carlos">
-    <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
-      <iframe src="https://api.leadconnectorhq.com/widget/booking/kaYZDlrdS8NM6DQ7TPp0" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="kaYZDlrdS8NM6DQ7TPp0_cc"></iframe>
-    </div>
-  </div>
-</div>
-```
-
   </div>
 </section>
 
 <section class="cta">
-  <div class="cta-inner reveal">
+  <div class="cta-inner">
     <h2 class="cta-title">Walk In Looking Good.<br>Walk Out Looking Great.</h2>
     <p class="cta-sub">Los Angeles' premier barbershop. Book your appointment today.</p>
     <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-white">Book Appointment →</a>
@@ -453,7 +442,7 @@ nav{padding:0 5%}
     <div>
       <div class="footer-col-title">Contact</div>
       <div class="footer-contact"><a href="tel:8315664767">(831) 566-4767</a></div>
-      <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#80e8e5ececefc0edefeaeff7e5e2f3e9f4e5aee3efed"><span class="__cf_email__" data-cfemail="4e262b2222210e23212421392b2c3d273a2b602d2123">[email&#160;protected]</span></a></div>
+      <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#1c74797070735c717376736b797e6f756879327f7371"><span class="__cf_email__" data-cfemail="3c54595050537c515356534b595e4f554859125f5351">[email&#160;protected]</span></a></div>
       <div class="footer-contact">Los Angeles, CA</div>
       <div style="margin-top:20px">
         <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-red" style="font-size:10px;padding:12px 24px;color:var(--white)!important">Book Now →</a>
