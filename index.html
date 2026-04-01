@@ -147,7 +147,7 @@ a:hover{color:var(–white)}
 .footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .footer-copy{font-size:11px;color:var(–gray)}
 .footer-powered a{font-size:11px;color:var(–chrome);text-decoration:none;letter-spacing:1px}
-.booking-cal{background:var(–blk);border:1px solid var(–border);padding:40px;max-width:860px;margin:0 auto}
+.booking-cal{background:var(–blk);border:1px solid var(–border);padding:40px;max-width:860px;margin:0 auto;overflow:visible}
 .reveal{opacity:1;transform:none;transition:opacity .7s ease,transform .7s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 @media(max-width:1024px){
@@ -165,8 +165,8 @@ a:hover{color:var(–white)}
 @media(max-width:640px){
 .about-img{height:280px;object-fit:cover;object-position:center top}
 .about-img-wrap{margin-bottom:0}
-.booking-cal{padding:0;border:none;background:transparent;overflow:hidden}
-.booking-cal>div{overflow:hidden!important}
+.booking-cal{padding:0;border:none;background:transparent}
+.booking-cal>div{overflow:visible}
 iframe{max-width:100vw}
 nav{padding:0 5%}
 .nav-links{display:none}
@@ -363,7 +363,7 @@ nav{padding:0 5%}
     </div>
     <div class="tab-panel on" id="tab-services">
       <div style="overflow:hidden;width:100%;max-width:860px;margin:0 auto">
-        <iframe src="https://api.leadconnectorhq.com/widget/service-menu/69cb2b9f575c601b0f76023c" style="width:100%;border:none;overflow:hidden;min-height:650px;display:block" scrolling="no" id="svc_menu"></iframe>
+        <iframe src="https://api.leadconnectorhq.com/widget/service-menu/69cb2b9f575c601b0f76023c" style="width:100%;border:none;overflow:hidden;min-height:900px;display:block" id="svc_menu"></iframe>
       </div>
     </div>
     <div class="tab-panel" id="tab-barbers">
@@ -404,7 +404,7 @@ nav{padding:0 5%}
   <div class="cta-inner">
     <h2 class="cta-title">Walk In Looking Good.<br>Walk Out Looking Great.</h2>
     <p class="cta-sub">Los Angeles' premier barbershop. Book your appointment today.</p>
-    <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-white">Book Appointment →</a>
+    <a href="#booking" class="btn btn-white">Book Appointment →</a>
   </div>
 </section>
 
@@ -445,7 +445,7 @@ nav{padding:0 5%}
       <div class="footer-contact"><a href="/cdn-cgi/l/email-protection#1c74797070735c717376736b797e6f756879327f7371"><span class="__cf_email__" data-cfemail="3c54595050537c515356534b595e4f554859125f5351">[email&#160;protected]</span></a></div>
       <div class="footer-contact">Los Angeles, CA</div>
       <div style="margin-top:20px">
-        <a href="https://api.leadconnectorhq.com/widget/booking/gbJXvbCSdQPzD7UrinDu" target="_blank" class="btn btn-red" style="font-size:10px;padding:12px 24px;color:var(--white)!important">Book Now →</a>
+        <a href="#booking" class="btn btn-red" style="font-size:10px;padding:12px 24px;color:var(--white)!important">Book Now →</a>
       </div>
     </div>
   </div>
