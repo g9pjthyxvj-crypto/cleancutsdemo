@@ -188,8 +188,8 @@ nav{padding:0 5%}
 }
 
 .booking-tabs{display:flex;gap:2px;margin-bottom:36px;border-bottom:1px solid var(–border)}
-.tab-btn{padding:14px 28px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(–chrome);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s;font-family:‘Inter’,sans-serif}
-.tab-btn.on{color:var(–white);border-bottom-color:var(–red)}
+.tab-btn{padding:14px 28px;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#B8B8B8;background:#0A0A0A;border:none;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s;font-family:‘Inter’,sans-serif;-webkit-appearance:none}
+.tab-btn.on{color:#F0EDE8;border-bottom-color:#8B0000}
 .tab-panel{display:none}.tab-panel.on{display:block}
 .barber-tabs{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-bottom:28px}
 .barber-tab{display:flex;align-items:center;gap:12px;padding:16px 18px;background:var(–blk2);border:1px solid var(–border);cursor:pointer;transition:all .25s;border-bottom:2px solid transparent}
@@ -198,7 +198,11 @@ nav{padding:0 5%}
 .btab-name{font-family:‘Playfair Display’,serif;font-size:15px;font-weight:600;color:var(–white)}
 .btab-role{font-size:10px;color:var(–red3);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px}
 .barber-cal{display:none}.barber-cal.on{display:block}
-@media(max-width:640px){.barber-tabs{grid-template-columns:1fr}}
+@media(max-width:640px){
+.barber-tabs{grid-template-columns:1fr}
+.booking-tabs{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.tab-btn{padding:16px 20px;font-size:11px;min-width:140px}
+}
 </style>
 
 </head>
